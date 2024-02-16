@@ -143,7 +143,7 @@ const updateHero = async (req, res) => {
         })
     }
     try {
-        const hero = await Hero.findByIdAndUpdate(id, value, { new: true })
+        const hero = await Hero.findByIdAndUpdate(id, {description:value.description,punchLine:value.punchline}, { new: true })
         if (!hero) {
             return res.status(400).json({
                 message: "hero not found"
