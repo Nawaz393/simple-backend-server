@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const auth = require("./routers/auth")
 const career = require("./routers/career")
 const hero = require("./routers/hero")
+const public=require("./routers/public")
 //configs
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -17,6 +18,7 @@ const port = process.env.PORT || 3000
 
 
 app.use("/", auth)
+app.use("/", public)
 app.use("/", career)
 app.use("/",hero)
 app.get('/', (req, res) => res.send('Hello World!'))

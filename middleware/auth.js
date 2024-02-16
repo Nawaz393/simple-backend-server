@@ -2,6 +2,7 @@ const jwt = require("jsonwebtoken");
 const { Username } = require("../controllers/auth")
 require("dotenv").config();
 module.exports = async (req, res, next) => {
+    console.log("Reached RequireAuth middleware");
     const { authorization } = req.headers;
     if (!authorization) {
         return res.status(401).json("you must be logged in");
