@@ -2,8 +2,8 @@ const jwt = require("jsonwebtoken")
 const Joi = require("joi")
 require("dotenv").config()
 
-const Username = 'admin123';
-const Password = 'admin123';
+const Username = 'mbdevelopment161@gmail.com';
+const Password = 'mb4455devs@554';
 // Joi schema for validation
 const signInSchema = Joi.object({
     username: Joi.string().required(),
